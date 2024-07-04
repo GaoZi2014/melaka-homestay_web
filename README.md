@@ -1,5 +1,6 @@
 <p align="center">
-  <img width="128" align="center" src="/assets/pg_icon/home.png">
+  <img width="128" align="center" src="/assets/pg_icon/home.png" media="(prefers-color-scheme: light)">
+  <img width="128" align="center" src="/assets/pg_icon_dark/home.png" media="(prefers-color-scheme: dark)">
 </p>
 <h1 align="center">Melaka Homestay Web By JIEGE</h1>
 
