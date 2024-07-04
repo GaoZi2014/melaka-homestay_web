@@ -89,7 +89,8 @@ nav li:first-child{
 }
 
 .sidebar li{
-  width: 100%;
+  width: 90%;
+  text-align: left;
 }
 
 .sidebar a{
