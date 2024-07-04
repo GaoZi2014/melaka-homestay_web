@@ -60,6 +60,10 @@ nav a:hover{
   transform: scale(1);
 }
 
+.pg-title {
+  text-align: left;
+}
+
 .pg-title:hover {
   transform: scale(1);
   color: #000000;
@@ -155,8 +159,12 @@ nav li:first-child{
 .copyright {
   background-color: #000;
   color: #fff;
-  height: 30px;
+  text-align: left;
   width: 100%;
+}
+
+.copyright span {
+  margin-left: 20px;
 }
 
 .flex {
@@ -378,4 +386,22 @@ a:hover {
 .touristSpotTitle {
   font-size: 22px;
   color: #252525;
+}
+
+.copyright-profile-picture {
+  width: 40px;
+  margin-top: -25px;
+  transition: all 0.3s;
+}
+
+.copyright-profile-picture:hover {
+  transform: rotate(-360deg);
+}
+
+.copyright-link {
+  color: #fff;
+}
+
+.copyright-link:hover {
+  color: #bababa;
 }
