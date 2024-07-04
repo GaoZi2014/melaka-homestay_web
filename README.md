@@ -15,5 +15,5 @@
 <p align="center">You can see out website at <a href="https://melakahomestay-beta.eu.org"><img src="https://img.shields.io/badge/Melaka%20Homestay-Click%20To%20See%20Our%20Website-brightgreen%22"></a></p>
 <p align="center"><img src="https://jiegephoto.netlify.app/mh.png"></p>
 
-> ## Lastest Notice
+> ## Version 2.0.1 !!!!!!!!!!!!!!!!
 [New] Big UI Refresh!!!!!!!!!!!!!!!!!!!!
