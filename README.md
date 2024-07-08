@@ -16,4 +16,7 @@
 <p align="center"><img src="https://jiegephoto.netlify.app/mh.png"></p>
 
 > ## Version 2.0.1 !!!!!!!!!!!!!!!!
-[New] Big UI Refresh!!!!!!!!!!!!!!!!!!!!
+[New] Added custom 404 page
+<br>
+<br>
+Big UI Refresh!!!!!!!!!!!!!!!!!!!!
