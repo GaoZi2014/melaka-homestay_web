@@ -144,6 +144,7 @@ nav li:first-child{
 .content-wrapper {
   background-color: #ffffffd2;
   width: 100%;
+  min-height: 89.9vh;
   backdrop-filter: blur(1em);
   -webkit-backdrop-filter: blur(1em);
 }
@@ -160,6 +161,8 @@ nav li:first-child{
   background-color: #000;
   color: #fff;
   text-align: left;
+  position: fixed;
+  bottom: 0;
   width: 100%;
 }
 
@@ -271,6 +274,7 @@ button {
   border-radius: 50px;
   border: none;
   width: 50%;
+  max-width: 400px;
   font-size: 19px;
   font-weight: 400;
   font-family: 'Poppins';
@@ -282,6 +286,29 @@ button {
 }
 
 button:hover {
+  background-color: #fdfdfdcc;
+  box-shadow: 10px 10px 10px #0000001c;
+  color: rgb(35, 157, 237);
+  cursor: pointer;
+}
+
+.button-mobile {
+  padding: 18px;
+  border-radius: 50px;
+  border: none;
+  width: 90%;
+  max-width: 400px;
+  font-size: 19px;
+  font-weight: 400;
+  font-family: 'Poppins';
+  margin-bottom: 30px;
+  background-color: #ffffffcc;
+  box-shadow: 5px 5px 5px #0000001c;
+  transition: all 0.5s;
+  margin: 20px;
+}
+
+.button-mobile:hover {
   background-color: #fdfdfdcc;
   box-shadow: 10px 10px 10px #0000001c;
   color: rgb(35, 157, 237);
@@ -404,4 +431,41 @@ a:hover {
 
 .copyright-link:hover {
   color: #bababa;
+}
+
+@keyframes changecolor {
+  0% {
+    color: #fe0000;
+  }
+
+  40% {
+    color: #3cf10e
+  }
+
+  80% {
+    color: #0024ff
+  }
+
+  90% {
+    color: #c500ff
+  }
+
+  95% {
+    color: #ff009c
+  }
+
+  100% {
+    color: #fe0000
+  }
+}
+
+.err-text {
+  font-size: 120px;
+  animation: changecolor 15s infinite alternate-reverse;
+  transition: all 0.5s;
+  letter-spacing: 20px;
+}
+
+.err-des {
+  font-size: 20px;
 }

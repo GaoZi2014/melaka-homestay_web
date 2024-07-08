@@ -1,3 +1,13 @@
+if (navigator.userAgent.match(/MSIE (?: [^;]*)?8/)) { // IE8
+  window.location.href = "https://jiegeblog.eu.org/browser_not_support.html";
+} else if (navigator.userAgent.match(/MSIE (?: [^;]*)?9/)) { // IE9
+  window.location.href = "https://jiegeblog.eu.org/browser_not_support.html";
+} else if (navigator.userAgent.match(/MSIE (?: [^;]*)?10/)) { // IE10
+  window.location.href = "https://jiegeblog.eu.org/browser_not_support.html";
+} else if (navigator.userAgent.match(/Trident\/\d.+ rv:11\./)) { // IE11 (using Trident version)
+  window.location.href = "https://jiegeblog.eu.org/browser_not_support.html";
+}
+
 function showSidebar() {
   const sidebar = document.querySelector('.sidebar');
   window.scrollTo(0, 0);
@@ -46,3 +56,15 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 };
+
+
+
+setTimeout(errtext, 5000)
+
+function errtext() {
+  let errtext = document.getElementById('err-text');
+  let errtextM = document.getElementById('err-text-mobile');
+
+  errtext.style.fontSize = "80px"
+  errtextM.style.fontSize = "80px"
+}

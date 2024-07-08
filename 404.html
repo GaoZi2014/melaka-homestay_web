@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 | Melaka Homestay</title>
+  <link rel="icon" href="assets/pg_icon/home.png" type="image/x-icon" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="assets/pg_icon_dark/home.png" type="image/x-icon" media="(prefers-color-scheme: dark)">
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+  body{
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(211,243,255);
+    background: linear-gradient(128deg, rgba(211,243,255,1) 0%, rgba(0,195,238,1) 31%, rgba(185,242,255,1) 100%);
+  }
+
+  nav{
+    backdrop-filter: blur(90px);
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 5px 5px 5px #00000018;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.5s;
+  }
+
+  nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav li{
+    height: 50px;
+  }
+
+  nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    transition: all 0.5s;
+  }
+
+  nav a:hover{
+    transform: scale(1.1);
+  }
+
+  .current-page {
+    background-color: #00000009;
+  }
+
+  .current-page:hover {
+    transform: scale(1);
+  }
+
+  .pg-title {
+    text-align: left;
+  }
+
+  .pg-title:hover {
+    transform: scale(1);
+    color: #000000;
+  }
+
+  nav li:first-child{
+    margin-right: auto;
+  }
+
+  .sidebar{
+    position: fixed;
+    top: -1000; 
+    right: 0px;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.892);
+    backdrop-filter: blur(1em);
+    -webkit-backdrop-filter: blur(1em);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: all 0.5s;
+    z-index: 100;
+  }
+
+  .sidebar li{
+    width: 90%;
+    text-align: left;
+  }
+
+  .sidebar a{
+    width: 100%;
+  }
+
+  .menu-button{
+    display: none;
+  }
+
+  .showOnMobile {
+    display: none;
+  }
+
+  @media(max-width: 1318px){
+    .hideOnMobile{
+      display: none;
+    }
+
+    .showOnMobile {
+      display: block;
+    }
+
+    .menu-button{
+      display: block;
+    }
+
+    .menu-button-first:hover{
+      transform: rotate(-90deg);
+      margin-left: 0px;
+    }
+
+    nav a:hover{
+      transform: scale(1);
+      margin-left: 10px;
+    }
+
+    .pg-title:hover {
+      margin-left: 0;
+    }
+  }
+
+  .container {
+    margin-top: 20px;
+  }
+
+  .content-wrapper {
+    background-color: #ffffffd2;
+    width: 100%;
+    min-height: 89.9vh;
+    backdrop-filter: blur(1em);
+    -webkit-backdrop-filter: blur(1em);
+  }
+
+  .content-home-height-mobile{
+    min-height: 5900px;
+  }
+
+  .content {
+    margin: 10px;
+  }
+
+  .copyright {
+    background-color: #000;
+    color: #fff;
+    text-align: left;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .copyright span {
+    margin-left: 10px;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .flex-with-wrap-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .right-border {
+    border-right: 5px solid #000;
+  }
+
+  .content-div {
+    width: 50%;
+  }
+
+  .content-div-mobile {
+    width: 100%;
+  }
+
+  .pg-icon {
+    width: 100px;
+    margin-top: 20vh;
+  }
+
+  .pg-icon-mobile {
+    width: 100px;
+    margin-top: 30px;
+  }
+
+  .title {
+    font-family: 'Monomaniac One', sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+
+  .sub-title {
+    font-family: 'Monomaniac One', sans-serif;
+    font-size: 40px;
+    text-align: left;
+  }
+
+  .rooms-section, .others-section, .forUsers-section, .fan-section, .wifi-section, .books-section, .padlocks-section, .tourist-section {
+    margin: 0px 40px 40px 40px;
+    text-align: left;
+  }
+
+  .main-title-div {
+    background-image: url('assets/picture/background.png');
+    margin-right: 10px;
+    height: 100vh;
+    max-height: 1500px;
+  }
+
+  .main-title-div-mobile {
+    background-image: url('assets/picture/background.png');
+    height: 500px;
+  }
+
+  .white-background-mobile {
+    background-color: #ffffffab;
+    backdrop-filter: blur(15px);
+    height: 450px;
+  }
+
+  .white-background {
+    background-color: #ffffffab;
+    backdrop-filter: blur(15px);
+    height: 93vh;
+    max-height: 1450px;
+  }
+
+  .Hashtagblack-background {
+    font-size: 15px;
+    background-color: #000000cd;
+    color: white;
+    padding: 10px;
+    width: 220px;
+    border-radius: 10px;
+  }
+
+  hr {
+    height: 5px;
+    background-color: black;
+    border-color: black;
+    border-radius: 50px;
+    margin: 20px;
+  }
+
+  video {
+    width: 100%;
+    max-width: 1400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+  button {
+    padding: 18px;
+    border-radius: 50px;
+    border: none;
+    width: 50%;
+    max-width: 400px;
+    font-size: 19px;
+    font-weight: 400;
+    font-family: 'Poppins';
+    margin-bottom: 30px;
+    background-color: #ffffffcc;
+    box-shadow: 5px 5px 5px #0000001c;
+    transition: all 0.5s;
+    margin: 20px;
+  }
+
+  button:hover {
+    background-color: #fdfdfdcc;
+    box-shadow: 10px 10px 10px #0000001c;
+    color: rgb(35, 157, 237);
+    cursor: pointer;
+  }
+
+  .button-mobile {
+    padding: 18px;
+    border-radius: 50px;
+    border: none;
+    width: 90%;
+    max-width: 400px;
+    font-size: 19px;
+    font-weight: 400;
+    font-family: 'Poppins';
+    margin-bottom: 30px;
+    background-color: #ffffffcc;
+    box-shadow: 5px 5px 5px #0000001c;
+    transition: all 0.5s;
+    margin: 20px;
+  }
+
+  .button-mobile:hover {
+    background-color: #fdfdfdcc;
+    box-shadow: 10px 10px 10px #0000001c;
+    color: rgb(35, 157, 237);
+    cursor: pointer;
+  }
+
+  .pic-div img {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .pic-div-mobile img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .pic-div-mobile {
+    width: 100%;
+    text-align: center;
+  }
+
+  .des-div-mobile {
+    width: 100%;
+    margin-left: 0px;
+    font-size: 20px;
+  }
+
+  .pic-div {
+    width: 50%;
+    text-align: center;
+  }
+
+  .des-div {
+    width: 50%;
+    margin-left: 20px;
+    font-size: 20px;
+  }
+
+  a {
+    color: rgb(35, 157, 237);
+    text-decoration: none;
+    transition: all 0.5s;
+  }
+
+  a:hover {
+    color: rgb(26, 120, 183);
+  }
+
+  .ul-regular-style {
+    font-size: 20px;
+    margin-left: 20px;
+    list-style: none;
+  }
+
+  .vid1, .vid2 {
+    width: 50%;
+  }
+
+  .vid1-mobile, .vid2-mobile {
+    width: 100%;
+  }
+
+  .password-wrapper {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    height: 400px;
+  }
+
+  .password-wrapper-mobile {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    height: 400px;
+  }
+
+  .password {
+    margin: 10px;
+  }
+
+  .touristSpotRecommended {
+    margin: 10px;
+    background-color: #fff;
+    width: 330px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #0000001c;
+    transition: all 0.5s;
+  }
+
+  .touristSpotRecommended:hover {
+    background-color: #fdfdfdcc;
+    box-shadow: 10px 10px 10px #0000001c;
+    color: rgb(35, 157, 237);
+    cursor: pointer;
+  }
+
+  .touristSpotRecommendedContent {
+    margin: 10px;
+  }
+
+  .touristSpotTitle {
+    font-size: 22px;
+    color: #252525;
+  }
+
+  .copyright-profile-picture {
+    width: 40px;
+    margin-top: -25px;
+    transition: all 0.3s;
+  }
+
+  .copyright-profile-picture:hover {
+    transform: rotate(-360deg);
+  }
+
+  .copyright-link {
+    color: #fff;
+  }
+
+  .copyright-link:hover {
+    color: #bababa;
+  }
+
+  @keyframes changecolor {
+    0% {
+      color: #fe0000;
+    }
+
+    40% {
+      color: #3cf10e
+    }
+
+    80% {
+      color: #0024ff
+    }
+
+    90% {
+      color: #c500ff
+    }
+
+    95% {
+      color: #ff009c
+    }
+
+    100% {
+      color: #fe0000
+    }
+  }
+
+  .err-text {
+    font-size: 120px;
+    animation: changecolor 15s infinite alternate-reverse;
+    transition: all 0.5s;
+    letter-spacing: 20px;
+  }
+
+  .err-des {
+    font-size: 20px;
+  }
+</style>
+<body>
+  <nav>
+    <ul class="sidebar">
+      <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="furnitureTutorial.html">Fan & Wifi</a></li>
+      <li><a href="books.html">Books</a></li>
+      <li><a href="padlocks.html">Padlocks</a></li>
+      <li><a href="touristSpot.html">Homestay to Malacca Tourist Spot Distance</a></li>
+    </ul>
+    <ul>
+      <li><a class="pg-title" href="#">Error 404</a></li>
+      <li class="hideOnMobile"><a href="index.html">Home</a></li>
+      <li class="hideOnMobile"><a href="furnitureTutorial.html">Fan & Wifi</a></li>
+      <li class="hideOnMobile"><a href="books.html">Books</a></li>
+      <li class="hideOnMobile"><a href="padlocks.html">Padlocks</a></li>
+      <li class="hideOnMobile"><a href="touristSpot.html">Homestay to Malacca Tourist Spot Distance</a></li>
+      <li class="menu-button" onclick=showSidebar()><a class="menu-button-first" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+    </ul>
+  </nav>
+
+  <div class="container hideOnMobile">
+    <div class="content-wrapper">
+      <div class="content">
+        <br>
+        <h1 class="err-text" id="err-text">404</h1>
+        <p class="err-des">Server could not find the requested resource</p>
+        <br>
+        <br>
+        <button>Take me home</button>
+      </div>
+      <br>
+      <div class="copyright">
+        <a class="copyright-link" href="https://jiegeblog.eu.org/"><span><img class="copyright-profile-picture" src="assets/copyright/profile-transparent.png" alt="profile-picture">Copyright &copy; 2024 Jiege Developer</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile -->
+  <div class="container showOnMobile">
+    <div class="content-wrapper">
+      <div class="content">
+        <br>
+        <h1 class="err-text" id="err-text-mobile">404</h1>
+        <p class="err-des">Server could not find the requested resource</p>
+        <br>
+        <br>
+        <button class="button-mobile">Take me home</button>
+      </div>
+      <br>
+      <div class="copyright">
+        <a class="copyright-link" href="https://jiegeblog.eu.org/"><span><img class="copyright-profile-picture" src="assets/copyright/profile-transparent.png" alt="profile-picture">Copyright &copy; 2024 Jiege Developer</span></a>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/09f3feb132.js" crossorigin="anonymous"></script>
+</body>
+</html>
