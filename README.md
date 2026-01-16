@@ -1,7 +1,7 @@
 <p align="center">
   <img width="128" align="center" src="/assets/pg_icon/home.png" class="light-mode">
 </p>
-<h1 align="center">Melaka Homestay Web By JIEGE</h1>
+<h1 align="center">(End of support) Melaka Homestay Web By JIEGE</h1>
 
 <h3 align="center">This Website Is Using</h3>
 <div align="center">
